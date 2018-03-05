@@ -7,6 +7,8 @@ This is a fully running client/server implementation for a user management tool,
 3. Same environment for Dev|Prod
 4. Concise
 
+![alt text](resources/readme/flow.jpg "Flow")
+
 ## Technology:
 - **Sever**: Kotlin, Java, Jetty, Redis, Apache Shiro, AES encryption, Vert.X messaging (with ssl).
 - **Client**: Aurelia.io, Typescript. (mobile friendly css)
@@ -36,3 +38,7 @@ This is a fully running client/server implementation for a user management tool,
 update self.keystore in `resources` and add a new `dns:XXXXXXXX`
 
     keytool -keystore self.keystore -alias localhost -validity 3650 -genkey -keyalg RSA -sigalg SHA256withRSA -ext san=dns:localhost,dns:usermicroservice.com,dns:apigateway,dns:members,dns:webserver,dns:contact
+
+
+# Disclaimer
+All code provided in this git repository is experimental, and should not be used in production.
