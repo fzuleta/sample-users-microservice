@@ -22,6 +22,8 @@ This is a fully running `client/server` implementation for a user management too
 - Forgot password
 - Two factor authentication (enable | disable | recovery codes)
 - Guest account
+- Client/Server ssl communication
+- Server microservices communication using ssl
 
 ## To Run #
 1. add to `etc/hosts`
@@ -33,9 +35,10 @@ This is a fully running `client/server` implementation for a user management too
 5. open: `https://usermicroservice.com:8443` 
 6. in chrome accept private certificate.
 
+- You can always run with intelliJ by either running each module, or as a configuration.
 
 ### when adding new microservices
-update self.keystore in `resources` and add a new `dns:XXXXXXXX`
+update self.keystore in `resources` and add a new `dns:XXXXXXXX` and build and run again the docker images.
 
     keytool -keystore self.keystore -alias localhost -validity 3650 -genkey -keyalg RSA -sigalg SHA256withRSA -ext san=dns:localhost,dns:usermicroservice.com,dns:apigateway,dns:members,dns:webserver,dns:contact
 
@@ -47,5 +50,6 @@ All code provided in this git repository is experimental, and should not be used
 - must not be used as-is in production
 - must not be used as-is in production
 - must not be used as-is in production
+- See the LICENSE file for more info
 
 if you do use it in prod... well.. I told you not to. :)
