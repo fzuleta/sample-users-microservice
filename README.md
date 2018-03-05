@@ -9,7 +9,7 @@ This is a fully running client/server implementation for a user management tool,
 
 ## Technology:
 - **Sever**: Kotlin, Java, Jetty, Redis, Apache Shiro, AES encryption, Vert.X messaging (with ssl).
-- **Client**: Aurelia.io, Typescript.
+- **Client**: Aurelia.io, Typescript. (mobile friendly css)
 
 ## Features:
 - Login (with remember me)
@@ -33,6 +33,6 @@ This is a fully running client/server implementation for a user management tool,
 
 
 ### when adding new microservices
-update self.keystore in `resources` 
+update self.keystore in `resources` and add a new `dns:XXXXXXXX`
 
     keytool -keystore self.keystore -alias localhost -validity 3650 -genkey -keyalg RSA -sigalg SHA256withRSA -ext san=dns:localhost,dns:usermicroservice.com,dns:apigateway,dns:members,dns:webserver,dns:contact
