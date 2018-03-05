@@ -1,0 +1,17 @@
+<template>
+<require from="./dashboard.css"></require>
+<div class="dashboard form-page">
+    <div class="content"> 
+        <div class="content-padding">
+            <div class="flex-right">
+                <div class="button" click.trigger="openAccount()">Account</div>
+                <div>&nbsp;</div>
+                <div class="button" click.trigger="logout()">Logout</div>
+            </div>
+            <div class="flex-wrap">
+                <router-view name="rDasboard"></router-view> 
+            </div>
+        </div>
+    </div>
+</div>
+</template>

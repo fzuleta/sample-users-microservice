@@ -1,0 +1,20 @@
+<template>
+<require from="./profile.css"></require>
+<require from="./../balance/balance"></require>
+<require from="./../../account/anonymous_tip/anonymous_tip"></require>
+
+<div class="dashboard-profile">
+    <dashboard-balance></dashboard-balance>
+    <div>
+        <h4 t="profile:dashboard.title">PROFILE INFO</h4>
+
+        <anonymous-tip if.bind="user.me.anonymousAccount"></anonymous-tip>
+
+        <br>
+        <br>
+        <h3 t="profile:dashboard.thankyou">THANK YOU!</h3>
+        <div t="profile:dashboard.registered">You have successfully registered.</div>
+        <br>
+    </div>
+</div>
+</template>

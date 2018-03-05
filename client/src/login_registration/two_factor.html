@@ -1,0 +1,23 @@
+<template>
+<require from="./two_factor.css"></require>
+<div class="two_factor form-page">
+    <div class="content">
+        <h1 t="loginreg:twofactor.auth.title">Welcome Back</h1>
+        <h4 t="loginreg:twofactor.auth.subtitle">Good to see you.</h4> 
+        <div class="form-label"  t="loginreg:twofactor.auth.code">Code</div>
+        <div>
+            <input type="number" disabled.bind="showLoader" value.bind="code" class="form-control input-sm ${errors.code ? 'form-control-error':''}">
+        </div>
+        <br>  
+        <div class="flex-left">
+            <div class="button" click.trigger="login()" t="loginreg:twofactor.auth.login">Login</div>
+        </div>
+        
+        <recaptcha verified.call="onCaptchaVerified()" if.bind="captchaEnabled" view-model.ref="captchaDiv"></recaptcha>
+ 
+        <br> 
+        <div><a href="#" click.trigger="openUnableToSubmitCode()" t="loginreg:twofactor.auth.unable">Unable to submit code?</a></div>
+        <br> 
+    </div>
+</div>
+</template>

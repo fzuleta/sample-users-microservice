@@ -1,0 +1,9 @@
+<template>
+<require from="./balance.css"></require>
+<require from="./../balance/balance"></require>
+<div class="dashboard-balance">
+    <h4 class="the-title">YOUR BALANCE</h4>
+    <h1 class="balance">${balance | moneyFormat:MONEY}</h1>
+    <h4 class="subtitle">Coins</h4>
+</div>
+</template>

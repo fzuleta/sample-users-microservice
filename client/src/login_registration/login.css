@@ -1,0 +1,49 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+.login .the-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.login .anonymous {
+  position: relative;
+  padding: 5px;
+}
+.login .anonymous .text {
+  padding: 5px 0 0 5px;
+}
+.sign-forget {
+  position: relative;
+  max-width: 413px;
+  height: 40px;
+}
+.sign-forget .sign-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sign-forget .forgot {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .the-button {
+    justify-content: center;
+  }
+  .sign-forget {
+    position: static;
+    margin: 10px 0 20px 0;
+  }
+  .sign-forget .sign-in {
+    position: static;
+  }
+  .sign-forget .forgot {
+    position: static;
+    padding: 10px 0 10px 0;
+  }
+}

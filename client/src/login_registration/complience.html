@@ -1,0 +1,42 @@
+<template>
+<require from="./complience.css"></require>
+<div class="complience form-page">
+    <div class="content"> 
+        <div show.bind="!sent">
+            <h1 t="loginreg:complience.title">Complience with Anti Money Laundering (AML) and Counter Finance Terrorism (CFT)</h1>
+            <div t="loginreg:complience.p0_0"></div>
+            <div t="loginreg:complience.p0_1"></div>
+            <div t="loginreg:complience.p0_2"></div>
+            <div t="loginreg:complience.p0_3"></div>
+            <div t="loginreg:complience.p0_4"></div>
+
+            <h3 t="loginreg:complience.h1"></h3>
+            <div t="loginreg:complience.p1_0"></div>
+            <div t="loginreg:complience.p1_1"></div>
+            <div t="loginreg:complience.p1_2"></div>
+
+            <br> 
+            <div class="form-label ${errors.check1 ? 'form-control-error':''}">
+                <input type="checkbox" id="reg-chk-1" checked.bind="chk0"> 
+                <label for="reg-chk-1" t="loginreg:complience.chk_0"></label>
+            </div>
+            <div class="form-label ${errors.check1 ? 'form-control-error':''}">
+                <input type="checkbox" id="reg-chk-2" checked.bind="chk1"> 
+                <label for="reg-chk-2" t="loginreg:complience.chk_1"></label>
+            </div>
+            <div class="form-label ${errors.check1 ? 'form-control-error':''}">
+                <input type="checkbox" id="reg-chk-3" checked.bind="chk2"> 
+                <label for="reg-chk-3" t="loginreg:complience.chk_2"></label>
+            </div>
+            <div class="form-label ${errors.check1 ? 'form-control-error':''}">
+                <input type="checkbox" id="reg-chk-4" checked.bind="chk3"> 
+                <label for="reg-chk-4" t="loginreg:complience.chk_3"></label>
+            </div>
+            <br> 
+            <div class="the-button">
+                <div class="button" click.trigger="recover()" t="loginreg:complience.continue">Recover password</div>
+            </div>
+        </div>
+    </div>
+</div>
+</template>

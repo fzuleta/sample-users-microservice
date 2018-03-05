@@ -1,0 +1,17 @@
+.confirm_email_sent {
+  display: flex;
+  justify-content: center;
+}
+.confirm_email_sent a,
+.confirm_email_sent a:link,
+.confirm_email_sent a:visited,
+.confirm_email_sent a:active {
+  font-size: 16px;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .the-button {
+    justify-content: center;
+  }
+}

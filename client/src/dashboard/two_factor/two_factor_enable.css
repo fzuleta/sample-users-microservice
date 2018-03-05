@@ -1,0 +1,76 @@
+.two_factor {
+  display: flex;
+  justify-content: center;
+}
+.two_factor .content {
+  display: block;
+  width: 800px;
+  background-color: white;
+  border-radius: 3px;
+  padding: 50px;
+}
+.two_factor .the-button {
+  display: flex;
+  justify-content: left;
+}
+.two_factor .code .num {
+  margin: 0 20px 0 0;
+}
+.two_factor .code {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.two_factor .sep {
+  width: 100%;
+  border-bottom: 1px #eff2f7 solid ;
+  margin: 15px 0 25px 0;
+}
+.two_factor .code .right-border {
+  border-right: 1px black solid;
+}
+.two_factor .code .ml {
+  margin-left: 20px;
+}
+.two_factor .secret-code,
+.two_factor .secret-codes {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin-top: 2px;
+  background-color: #eff2f7;
+  border-radius: 3px;
+  border: none;
+  font-size: 32px;
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.two_factor .secret-codes {
+  height: 100%;
+  margin-bottom: 20px;
+}
+.two_factor .help ol li {
+  padding: 10px 0 10px 0;
+}
+.two_factor .step1 .red {
+  color: red;
+}
+.two_factor .step2 .desktop-button-ml {
+  margin-left: 10px;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .the-button {
+    justify-content: center;
+  }
+  .two_factor .step2 .desktop-button-ml {
+    margin-left: 0;
+  }
+  .two_factor .code .right-border {
+    border-right: none;
+  }
+}

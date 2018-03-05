@@ -1,0 +1,57 @@
+<template>
+<require from="./account.css"></require>
+<require from="./anonymous_settings/anonymous_settings"></require>
+<form>
+<div class="account form-page">
+    <div class="content">
+        <div align="center">
+            <h2 t="profile:account.title">Account</h2>
+
+            <div class="line"></div>
+            
+            <div style="width: 250px;">
+                <div class="button" click.trigger="enable2fa()" show.bind="!user.twofactorEnabled">Enable 2fa</div>
+                <div class="button" click.trigger="disable2fa()" show.bind="user.twofactorEnabled">Disable 2fa</div>
+            </div>
+            <div if.bind="user.me.anonymousAccount">
+                <div class="line"></div>
+                <anonymous-settings></anonymous-settings>
+            </div>
+            <div class="line"></div>
+
+            <div class="password">
+                <table width="100%">
+                    <tr>
+                        <td><span t="profile:account.oldpassword">Old Password</span></td>
+                        <td><input type="password" value.bind="oldPassword" class="form-control input-sm ${errors.password0 ? 'form-control-error':''}"></td>
+                    </tr>
+                    <tr>
+                        <td><span t="profile:account.newpassword0">New Password</span></td>
+                        <td><input type="password" value.bind="newPassword0" class="form-control input-sm ${errors.password ? 'form-control-error':''}"></td>
+                    </tr>
+                    <tr>
+                        <td><span t="profile:account.newpassword1">Repeat Password</span></td>
+                        <td><input type="password" value.bind="newPassword1" class="form-control input-sm ${errors.password ? 'form-control-error':''}"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td> 
+                    </tr>
+                    <tr> 
+                        <td colspan="2">
+                            <div class="flex-center text-center">
+                                <div style="width: 130px;">
+                                    <div class="button" click.trigger="cancel()" t="profile:account.cancel">Cancel</div>
+                                </div>
+                                <div style="width: 210px;">
+                                    <div class="button" click.trigger="save()" t="profile:account.save">Save</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</template>

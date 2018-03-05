@@ -1,0 +1,14 @@
+.registration .content .red {
+  color: red;
+}
+.registration .the-button {
+  display: flex;
+  justify-content: left;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .the-button {
+    justify-content: center;
+  }
+}

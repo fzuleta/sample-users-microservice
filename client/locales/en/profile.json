@@ -1,0 +1,23 @@
+{
+    "account": {
+        "title": "Account",
+        "oldpassword": "Old Password",
+        "newpassword0": "New Password",
+        "newpassword1": "Repeat Password",
+        "save": "Save changes",
+        "cancel": "Cancel",
+
+        "success":{
+            "password": "Password succesfully changed"
+        },
+
+        "error":{
+            "password": "There was an error changing your password"
+        }
+    },
+    "dashboard": {
+        "title": "PROFILE INFO",
+        "thankyou": "THANK YOU",
+        "registered": "You have successfully registered."
+    }
+}

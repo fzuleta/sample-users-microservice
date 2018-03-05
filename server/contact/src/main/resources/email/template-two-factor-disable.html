@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<body bgcolor="#ffffff">
+<div align="center" style="width:600px; font-family:'Arial', sans-serif; color: #4b4b4b;">
+    <div align="left">
+        <br>
+        <strong>Hi ${newMessage.name},</strong>
+        <br><br>
+
+        You are receiving this email because we received request to disable 2 Factor Authentication for your account.
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <a href="${newMessage.link}" style="background-color: #2879ff; border-radius: 10px; padding: 20px; color:white; text-decoration: none; text-transform: uppercase;">
+                DISABLE 2 FACTOR AUTHENTICATION
+            </a>
+        </div>
+        <br>
+        <br>
+        If you did not request this, no further action is required.
+        <br>
+        <br>
+        <div style="font-size: 10px;">
+            If you’re having trouble clicking the "Disable 2 Factor Authentication" button, copy and paste the URL below into your web browser:
+            <br>
+            <a href="${newMessage.link}">${newMessage.link}</a>
+        </div>
+        <br>
+
+
+        Regards,
+        <br>
+        Felipe
+    </div>
+</div>
+</body>
+</html>

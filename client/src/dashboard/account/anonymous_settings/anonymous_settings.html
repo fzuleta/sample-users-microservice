@@ -1,0 +1,26 @@
+<template>
+<style>
+.anonymous-settings {
+    background-color: #fffec4;
+    padding: 30px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.anonymous-settings .email,
+.anonymous-settings .password
+{
+    font-weight: 800;
+}
+</style>
+<form>
+<div class="anonymous-settings">
+    <div show.bind="!emailInfosent" t="anonymous.settings.text0">You are using an anonymous account, you can convert it to your main account by specifying your email here:</div>
+    <br>
+    <div show.bind="!emailInfosent">
+        <input class="form-control input-sm ${errors.email ? 'form-control-error':''}" type="text" value.bind="email" placeholder="Email">
+        <div class="button" click.trigger="changeEmail()" t="anonymous.settings.text1">Convert</div>
+    </div>
+    <div show.bind="emailInfosent" t="anonymous.settings.text2">Email info sent!</div>
+</div>
+</form>
+</template>

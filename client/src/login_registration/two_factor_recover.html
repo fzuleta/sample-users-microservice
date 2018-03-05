@@ -1,0 +1,22 @@
+<template>
+<require from="./two_factor_recover.css"></require>
+<div class="two_factor_recover form-page">
+    <div class="content">
+        <h1 t="loginreg:twofactor.recover.title">Welcome Back</h1>
+        <h4 t="loginreg:twofactor.recover.subtitle">Good to see you.</h4> 
+        <div class="form-label"  t="loginreg:twofactor.recover.code">Code</div>
+        <div>
+            <input type="text" disabled.bind="showLoader" value.bind="code" class="form-control input-sm ${errors.code ? 'form-control-error':''}">
+        </div>
+        <br>  
+        <recaptcha verified.call="onCaptchaVerified()" if.bind="captchaEnabled" view-model.ref="captchaDiv"></recaptcha>
+        
+        <div class="flex-left">
+            <div class="button" click.trigger="recover()" t="loginreg:twofactor.recover.recover">Recover</div>
+        </div>
+        <br>  
+        <h2 t="loginreg:twofactor.recover.cantfind"></h2>
+        <div t="loginreg:twofactor.recover.cantfinddescr"></div>
+    </div>
+</div>
+</template>

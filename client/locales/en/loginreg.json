@@ -1,0 +1,130 @@
+{
+    "login": {
+        "title": "Welcome Back",
+        "subtitle": "Good to see you.",
+        "email": "Email",
+        "password": "Password",
+        "signin": "Sign in",
+        "signup": "Sign up",
+        "anonymous": "Create a Guest account",
+        "forgotpass": "Forgot password?"
+    },
+    "register": {
+        "title": "Welcome",
+        "subtitle": "Very nice to see you. This form is to sign up",
+        "firstname": "First name",
+        "lastname": "Last name",
+        "email": "Email",
+        "password": "Password",
+        "selectyourcountry": "Select your country",
+        "descr0": "TO BE ABLE TO PARTICIPATE IN OUR ICO,",
+        "descr1": "YOU NEED TO STATE YOUR NATIONALITY AND COUNTRY OF RESIDENCE, AS PART OF OUR KYC PROCESS. KEEP IN MIND YOU'LL BE REQUIRED TO MAKE PROOF OF NATIONALITY DURING THE KYC PROCESS AND YOU WILL NOT BE ABLE TO WITHDRAW YOUR TOKENS IF THE KYC ISN'T SUCCESSFUL.",
+        "nationality": "Nationality",
+        "residence": "Residence",
+        "chk0_0": "I HAVE READ AND ACCEPTED THE ",
+        "chk0_1": "whitepaper",
+        "chk0_2": ", the ",
+        "chk0_3": "Acceptable Use Policy",
+        "chk0_4": ", the ",
+        "chk0_5": "Terms and conditions,",
+        "chk0_6": "and the ",
+        "chk0_7": "privacy policy",
+        "chk0_8": "documents",
+        "chk1_0": "I am not a US citizen",
+        "signup": "Sign up"
+    },
+    "confirm_email": {
+        "error": "There was an error confirming your email."
+    },
+    "confirm_email_sent": {
+        "sent": "We've sent you a confirmation email, please do check it to activate your account.",
+        "n0": "If the email takes longer than 5 minutes",
+        "n1": "click here",
+        "n2": "to send again",
+        "n3": "We've tried sending it again, please check your email, check your spam folder as well please."
+    },
+    "forgotpass":{
+        "title": "Recover your password",
+        "subtitle": "Enter your email below and we will send you a link to recover your password",
+        "email": "Email", 
+        "recover": "Recover password",
+        "sent": "Please check your email"
+    },
+    "resetpass":{
+        "title": "New Password",
+        "subtitle": "Please write a new password.",
+        "password": "Password", 
+        "recover": "Save password", 
+        "conditions" :{
+            "title": "Password should contain at least:",
+            "item0": "6 characters",
+            "item1": "One uppercase",
+            "item2": "One lowercase",
+            "item3": "One number"
+        }
+    },
+    "twofactor": {
+        "auth": {
+            "title": "Two Factor Authentication",
+            "subtitle": "Two Factor Authentication keeps your account more secure.",
+            "code": "Code",
+            "login": "login",
+            "unable": "Unable to submit code?"
+        },
+        "recover": {
+            "title": "Insert the recovery code",
+            "subtitle": "Enter the code we gave you when you first enabled Two-Factor Authentication.",
+            "code": "RECOVERY CODE",
+            "recover": "Recover", 
+            "cantfind": "I can't find my code",
+            "cantfinddescr": "A recovery code was given to you the first time you enabled the Two-Factor Authentication and is the only backup plan for when you're unable to access your Google Authenticator App. For security reasons, we don't keep any backup of your recovery code, so if you don't have your code you can contact us and we'll help you find a solution."
+        },
+        "title": "Two Factor Authentication",
+        "subtitle": "We highly recommend you to enable two-factor authentication in order to add an extra layer of security to your account. Do either:",
+        "scancode": "SCAN THIS CODE",
+        "authsecretcode": "MANUAL ENTRY",
+        "codebyapp": "Code provided by the Authenticator app.",
+        "insercode": "Insert code here",
+        "cancel": "Cancel",
+        "activate": "Next",
+        "how": {
+            "title": "Help?",
+            "subtitle": "",
+            "step0": "Install the Google Authenticator app in your mobile phone.",
+            "step1": "Scan the QR code with the Authenticator app.",
+            "step2": "Insert the code associated in the Authenticator app"
+        },
+        "step1":{
+            "title": "Your Recovery code",
+            "subtitle": "",
+            "label": "Your recovery code",
+            "descr": "Write or print this code and keep them it a safe location. If you lose your phone, this code is the only way for you to reconnect.",
+            "ready": "I've written it down",
+            "help" : {
+                "title": "Help?",
+                "step3": "Write or print the Recovery Code and keep it in a safe location.",
+                "step4": "If you lose your phone or if it gets stolen, you’ll need this code to reconnect to your account.",
+                "step5": "Do not share this code with anyone. Be alert to phishing attempts. <strong>Once this setup is completed, we will only ask you for this code if you ask to recover your account.</strong>"
+            }
+        },
+        "step2":{
+            "title": "Confirm your Recovery code :)",
+            "subtitle": "",
+            "enterrecoverycode": "Enter the recovery code",
+            "ididnthavetime": "I didn't write it down",
+            "completesetup": "OK, I wrote it down",
+            "descr": "After completing your two-factor authentication setup, we will never ask you for this code again, unless you prompt us to recover your account."
+        }
+    },
+    "twofactordisable": {
+        "title": "Disable two factor authentication",
+        "subtitle": "Enter your password",
+        "password": "Password",
+        "disable": "Disable Two-Factor",
+        "sent": "Please check your email to confirm disabling the Two-Factor Authentication.",
+        "step1": {
+            "disabled": "Two-Factor Authentication disabled.",
+            "error": "There was an error processing your request"
+        }
+    }
+}

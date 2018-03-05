@@ -1,0 +1,57 @@
+<template>
+<style>
+.faq {
+    display: flex;
+    justify-content: center;  
+}
+.faq h4 {
+    color:white;
+    font-size: 10px;
+}
+.faq h1 {
+    font-family: "Roboto", "sans-serif";
+    font-size: 42px;
+    font-weight: 800;
+    color:#333;
+}
+.faq .content {
+    max-width: 500px;
+    text-align: left;
+    background-color: white;
+    font-family: "Roboto", "sans-serif";
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px;
+}
+.faq .question {
+    margin-bottom: 50px;
+}
+.faq .title{
+    font-weight: 800;
+}
+/*Web Screen*/
+@media (min-width: 739px) {
+.faq .content {
+    min-width: 800px;
+}
+}
+/*Mobile screen*/
+@media (max-width: 740px) {
+    .faq .content {
+        min-width: 100%;
+        padding: 0 20px 0 20px;
+    }
+}
+</style>
+<div class="faq">
+    <div class="content">
+
+        <h1 t="faq:general.title"></h1>
+        <div class="question" repeat.for="q of questions">
+            <div class="title">${getTitle('general', q)}</div>
+            <div class="body">${getBody('general', q)}</div>
+        </div>
+
+    </div>
+</div>
+</template>

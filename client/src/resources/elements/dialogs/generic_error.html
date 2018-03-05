@@ -1,0 +1,22 @@
+<template>
+  <ux-dialog>
+    <ux-dialog-header>
+      <div align="center" show.bind="error.warning || error.error" style.bind="css_warn">
+        <i class="fa fa-2x fa-exclamation-triangle"></i>
+      </div>
+      <div align="center" show.bind="error.success" style.bind="css_success">
+        <i class="fa fa-2x fa-check"></i>
+      </div>
+    </ux-dialog-header>
+    <ux-dialog-body>
+      <div style.bind="css_message">
+        ${error.message}    
+      </div>
+    </ux-dialog-body>
+
+    <ux-dialog-footer>
+      <button click.trigger="dialogController.cancel()" show.bind="error.cancel">Cancel</button>
+      <button click.trigger="dialogController.ok(error)" show.bind="error.ok">Ok</button>
+    </ux-dialog-footer>
+  </ux-dialog>
+</template>

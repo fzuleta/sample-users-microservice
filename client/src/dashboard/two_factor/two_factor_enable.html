@@ -1,0 +1,97 @@
+<template>
+<require from="./two_factor_enable.css"></require>
+<div class="two_factor">
+    <div class="content">
+        <div class="step0" show.bind="step === 0">
+            <h1 t="loginreg:twofactor.title">How do I do this?</h1>
+            <h4 t="loginreg:twofactor.subtitle">Please type a new password</h4>
+    
+            <div class="code">
+                <h1 class="num">1</h1>
+                <div class="item right-border">
+                    <div class="form-label" t="loginreg:twofactor.scancode">scancode</div>
+                    <div>
+                        <img src.bind="qr" width="200" height="200">
+                    </div>
+                </div>
+                <div class="item ml">
+                    <div class="form-label" t="loginreg:twofactor.authsecretcode">scancode</div>
+                    <div class="secret-code">${secretKey}</div>
+                </div>
+                <div class="sep">&nbsp;</div>
+                <h1 class="num">2</h1>
+                <div>
+                    <div t="loginreg:twofactor.codebyapp"></div>
+                    <div>
+                        <input type="text" disabled.bind="showLoader" t="[placeholder]loginreg:twofactor.insercode" value.bind="verificationCode" class="form-control input-sm">
+                    </div>
+                </div>
+            </div> 
+
+            <div class="flex-center" style="margin-top: 20px;">
+                <div class="small-button" click.trigger="returnToAccount()" t="loginreg:twofactor.cancel">Cancel</div>
+                <div class="small-button" click.trigger="validateStep0()" t="loginreg:twofactor.activate">Activate</div>
+            </div>
+            
+            <div class="sep">&nbsp;</div>
+            <div class="help">
+                <h1 t="loginreg:twofactor.how.title"></h1>    
+                <h4 t="loginreg:twofactor.subtitle"></h4>
+                <ol>
+                    <li t="loginreg:twofactor.how.step0"></li>
+                    <li t="loginreg:twofactor.how.step1"></li>
+                    <li t="loginreg:twofactor.how.step2"></li>
+                </ol>
+            </div> 
+        </div> <!-- step0 -->
+        <div class="step1" show.bind="step === 1">
+            <h1 t="loginreg:twofactor.step1.title"></h1>
+            <h4 t="loginreg:twofactor.step1.subtitle"></h4>
+
+            <div class="flex-left">
+                <div class="fa fa-4x fa-exclamation-circle red" style="margin: 30px 10px 0 0;"></div>
+                <h2 t="loginreg:twofactor.step1.descr"></h2>
+            </div>
+
+            <div class="flex-center">
+                <div>
+                    <div class="form-label" t="loginreg:twofactor.step1.label"></div>
+                    <div class="secret-codes">${recoveryCode}</div>
+                </div>
+            </div>
+
+            <div class="flex-center" style="margin-top: 20px;">
+                <div class="button" click.trigger="validateStep1()" t="loginreg:twofactor.step1.ready">Activate</div>
+            </div>
+
+            <div class="sep">&nbsp;</div>
+            <div class="help">
+                <h1 t="loginreg:twofactor.step1.title"></h1>    
+                <h4 t="loginreg:twofactor.step1.subtitle"></h4>
+                <ol>
+                    <li t="loginreg:twofactor.step1.help.step3"></li>
+                    <li t="loginreg:twofactor.step1.help.step4"></li>
+                    <li innerhtml.bind="i18n.tr('loginreg:twofactor.step1.help.step5')"></li>
+                </ol>
+            </div> 
+        </div><!-- step1 -->
+        <div class="step2" show.bind="step === 2">
+            <h1 t="loginreg:twofactor.step2.title"></h1>
+            <h4 t="loginreg:twofactor.step2.subtitle"></h4>
+    
+            <div class="flex-center">
+                <div>
+                    <div class="form-label" t="loginreg:twofactor.step2.enterrecoverycode"></div>
+                    <input type="text" class="form-control input-lg" value.bind="txtRecoveryCode">
+                </div>
+            </div>
+            <div class="flex-center" style="margin-top: 20px;">
+                <button-0 text="${i18n.tr('loginreg:twofactor.step2.ididnthavetime')}" click.trigger="iDidntWriteIt()"></button-0>
+                <button-0 class="desktop-button-ml" btntype="blue" text="${i18n.tr('loginreg:twofactor.step2.completesetup')}" click.trigger="setup2fa()"></button-0> 
+            </div>
+            <div class="sep"></div>
+            <div t="loginreg:twofactor.step2.descr"></div>
+        </div>
+    </div> <!-- Content -->
+</div>
+</template>

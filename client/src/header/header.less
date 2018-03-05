@@ -1,0 +1,83 @@
+.header {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #392c3c;
+    background-color: #221426; 
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    z-index: 1000;
+} 
+.header .menu {
+    display: flex;
+    justify-content: left;
+}
+.header .item {
+    font-family: 'Monda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    padding: 10px 5px 0px 5px;
+    margin: 0 10px 0 0;
+    min-width: 50px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.header .item-hover:hover {
+    background-color: rgb(100, 137, 156); 
+}
+.header .icon {
+    margin-top: -5px;
+}
+.header .ico {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 9px 10px 0px 10px;
+    margin: 10px 4px 16px 0;
+}
+.header .drop {
+    position: relative;
+}
+.header .titleLang {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.header .flags {
+    position: absolute;
+    background-color: #221426;
+    z-index: 10000;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #392c3c;
+    width: 100px;
+    top:40px;
+    left:-77px;
+}
+.header .flag {
+    display: flex;
+}
+.header .flag:hover {
+    background-color: rgb(50, 61, 97); 
+}
+.header .flag span {
+    padding:5px 0 0 5px;
+}
+/*Web Screen*/
+@media (min-width: 769px) {
+    .header .mobile {
+        display: none;
+    }
+}
+/*Mobile screen*/
+@media (max-width: 768px) {
+    .header {
+        width: 100vw;
+    }
+    .header .desktop {
+        display: none;
+    }
+}

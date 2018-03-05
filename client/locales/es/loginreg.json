@@ -1,0 +1,130 @@
+{
+    "login": {
+        "title": "Bienvenido de nuevo",
+        "subtitle": "Que bueno verte.",
+        "email": "Email",
+        "password": "Contraseña",
+        "signin": "Login",
+        "signup": "Registro",
+        "anonymous": "Crear una cuenta de Invitado",
+        "forgotpass": "Olvide contraseña?"
+    },
+    "register": {
+        "title": "Bienvenido",
+        "subtitle": "Que bueno verte.",
+        "firstname": "Primer Nombre",
+        "lastname": "Apellido",
+        "email": "Email",
+        "password": "Contraseña",
+        "selectyourcountry": "Selecciona tu país",
+        "descr0": "Para participar en nuestro ICO,",
+        "descr1": "Tienes que especificar tu nacionalidad y pais de residencia. como parte de nuestro proceso KYC. Ten en cuenta que tendrás que proveer pruebas de nacionalidad durante el proceso KYC, y no podrás retirar los tokens si el KYC no es exitoso.",
+        "nationality": "Nacionalidad",
+        "residence": "Residence",
+        "chk0_0": "He leido y aceptado el ",
+        "chk0_1": "whitepaper",
+        "chk0_2": ", la ",
+        "chk0_3": "Politica de uso",
+        "chk0_4": ", los ",
+        "chk0_5": "Terminos y condiciones para participantes,",
+        "chk0_6": "y la ",
+        "chk0_7": "politica de privacidad",
+        "chk0_8": "",
+        "chk1_0": "No soy ciudadano de USA",
+        "signup": "Registro"
+    },
+    "confirm_email": {
+        "error": "Ocurrió un error confirmando tu email."
+    },
+    "confirm_email_sent": {
+        "sent": "Hemos enviado un email a tu correo, porfavor revisalo para activar tu cuenta.",
+        "n0": "Si el email toma mas de 5 minutos",
+        "n1": "Click Aqui",
+        "n2": "para enviar de nuevo",
+        "n3": "Hemos intentado enviarlo de nuevo, revisa tu email, también revisa la sección de spam."
+    },
+    "forgotpass":{
+        "title": "Recupera tu contraseña",
+        "subtitle": "Escribe tu email abajo y te enviaremos un link para recuperar tu contraseña.",
+        "email": "Email", 
+        "recover": "Recuperar contraseña",
+        "sent": "Porfavor revisa tu email"
+    },
+    "resetpass":{
+        "title": "Tu nueva contraseña",
+        "subtitle": "Escribe tu nueva contraseña.",
+        "password": "Contraseña", 
+        "recover": "Guardar contraseña", 
+        "conditions" :{
+            "title": "La contraseña debe tener minimo:",
+            "item0": "6 caracteres",
+            "item1": "Una mayuscula",
+            "item2": "Una minuscula",
+            "item3": "Un numero"
+        }
+    },
+    "twofactor": {
+        "auth": {
+            "title": "Autenticación de Dos Factores (2fa)",
+            "subtitle": "La Autenticación de Dos Factores mantiene tu cuenta mas segura.",
+            "code": "Código",
+            "login": "Login",
+            "unable": "No puedes enviar el código?"
+        },
+        "recover": {
+            "title": "Inserta tu código de recuperacion",
+            "subtitle": "Inserta el código que te enviamos cuando activaste la autenticación de 2 factores.",
+            "code": "CÓDIGO DE RECUPERACIÓN",
+            "recover": "Recuperar", 
+            "cantfind": "No encuentro mi código",
+            "cantfinddescr": "Un código se te fue dado cuando activaste la autenticación de dos factores y es el único plan para cuando no puedas accesar tu cuenta con Google Authenticator App. Por razones de seguridad, no guardamos copia de estos códigos, entonces, si no tienes tus códigos contactanos e intentaremos ayudarte con una solución."
+        },
+        "title": "Autenticación de Dos Factores (2fa)",
+        "subtitle": "Recomendamos habilitar la autenticación 2fa para añadir una capa extra de seguridad a tu cuenta. Haz una de las siguientes: ",
+        "scancode": "SCANEAR ESTE CODIGO",
+        "authsecretcode": "CÓDIGO SECRETO DE AUTHENTICATOR",
+        "codebyapp": "Código proveido por el app the autenticación.",
+        "insercode": "Insertar código aquí",
+        "cancel": "Cancelar",
+        "activate": "Activar",
+        "how": {
+            "title": "Ayuda?",
+            "subtitle": "",
+            "step0": "Instala el app Google Authenticator en tu dispositivo móbil.",
+            "step1": "Scanea el código QR con el app de Autenticación.",
+            "step2": "Inserta el código asociado a foli.feli.io en el app."
+        },
+        "step1":{
+            "title": "Tu código de Recuperación",
+            "subtitle": "",
+            "label": "Tu código de recuperación",
+            "descr": "Escribe o imprime este código y mantenlo en un sitio seguro. Si se te estravía el mobile, este código es la única manera de reconectarte a tu cuenta.",
+            "ready": "Lo hé escrito",
+            "help" : {
+                "title": "Ayuda?",
+                "step3": "Escribe o Imprime el código de recuperación de Folio.feli.io y mantenlo en un sitio seguro.",
+                "step4": "Si te te estravía el mobile, lo necesitarás para reconectar tu cuenta de Folio.feli.io.",
+                "step5": "No compartas éste código con alguien. Sé alerta a ataques phishing. <strong>Una vez este paso sea completo, solo te preguntarmos por este código si vas a recuperar tu cuenta.</strong>"
+            }
+        },
+        "step2":{
+            "title": "Confirma tu código de Recuperación :)",
+            "subtitle": "",
+            "enterrecoverycode": "Escribe el código de recuperación",
+            "ididnthavetime": "No lo escribí",
+            "completesetup": "OK, ya lo escribí",
+            "descr": "Después de completar el paso 2fa, jamás te preguntaremos por este código otra vez, a menos que intentes recuperar tu cuenta."
+        }
+    },
+    "twofactordisable": {
+        "title": "Deshabilitar autenticacion de dos factores",
+        "subtitle": "Entra tu contraseña",
+        "password": "Contraseña",
+        "disable": "Deshabilitar Autenticación de dos factores",
+        "sent": "Revisa tu Email para deshabilitar la Autenticación de dos factores.",
+        "step1": {
+            "disabled": "Autenticación de dos factores deshabilitada.",
+            "error": "Ocurrió un error procesando tu solicitud"
+        }
+    }
+}
