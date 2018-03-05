@@ -41,4 +41,11 @@ update self.keystore in `resources` and add a new `dns:XXXXXXXX`
 
 
 # Disclaimer
-All code provided in this git repository is experimental, and should not be used in production.
+All code provided in this git repository is experimental, and should not be used as-is in production.
+- Always change all passwords stored in the docker-compose.yml, or source code. this passwords are only for dev-testing.
+- create your own SSL certificates, ideally signed by a CA.
+- must not be used as-is in production
+- must not be used as-is in production
+- must not be used as-is in production
+
+if you do use it in prod... well.. I told you not to. :)
