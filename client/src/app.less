@@ -1,0 +1,245 @@
+
+html,body {
+    margin:0;
+    padding:0;
+    background-repeat: repeat-x;
+    background-color: #1c1c1f;
+    width: 100vw;
+    height:100vh;
+    .roboto; 
+    font-weight: 200; 
+    color:#4a599a;
+    font-size: 15px; 
+}
+::selection {
+    background: #200b1c; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #200b1c; /* Gecko Browsers */
+}
+h1, h2, h3, h4 {
+    .monda;
+    font-weight: 200;
+}
+h3 {
+    font-size: 22px;
+}
+.p {
+    display: block;
+    line-height: 27px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.roboto {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.monda {
+    font-family: 'Monda', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+}
+.h1 {
+   font-size: 30px; 
+}
+.roboto-light{
+    font-weight: 300;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+    .roboto;
+    font-weight: 200;
+    color: #4a599a;
+}
+.green-monda {
+    .monda;
+    color: #cefe52;
+}
+.title {
+    font-size: 42px;
+    text-align: center;
+    margin: 63px 0 63px 0;
+}
+/* Loading screen */
+#loadingScreen {
+    position:fixed;
+    z-index: 1100;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: rgba(26, 26, 26, 0.7);
+    top:0;
+}
+#loadingScreen .splash-title {
+    text-align: center;
+    max-width: 500px;
+    margin: 15% auto;
+    padding: 20px;
+}
+#loadingScreen .splash-title h1 {
+    font-size: 26px;
+}
+
+.form-control {
+    margin-top: 2px;
+    background-color: #fff;
+    color: #5f5f5f;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 3px; 
+    font-weight: 200;
+    font-size: 16px; 
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    max-width: 400px;
+}
+.form-control-error {
+    border: 1px red solid;
+    border-radius: 3px;
+}
+.form-label {
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+    font-size: 12px;
+}
+.form-label-light {
+    .roboto;
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+    font-size: 12px;
+}
+.text-center, .center-text {
+    text-align: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.flex, .flex-left {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-space-in-between {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-self-right {
+    align-self: flex-end;
+}
+.flex-self-left {
+    align-self: flex-start;
+}
+.link {
+    cursor: pointer;
+}
+.link-blue {
+    cursor: pointer;
+    color: #2879ff;
+    text-decoration: underline;
+    font-style: italic;
+}
+.line {
+    height: 5px;
+    margin: 10px 0 10px 0;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+.small-text { 
+    font-size: 10px;
+}
+.button-outline,
+.button {
+    .monda;
+    background-color: #c1f942;
+    text-transform: uppercase;
+    color:#4a599a;
+    font-size: 16px;
+    padding: 5px 40px 10px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    display: flex;
+    justify-content: center; 
+}
+.button:hover {
+    background-color: #d3ff6b;
+}
+.button-outline .text,
+.button .text {
+    padding-top: 7px;
+}
+ 
+.button-outline {
+    background: none;
+    border: 2px solid #c1f942;
+    color: #c1f942;
+}
+
+.small-button { 
+    // display: flex;
+    justify-content: center; 
+    background-color: #c1f942;
+    text-transform: uppercase;
+    color:#4a599a;
+    cursor: pointer; 
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    // font-weight: 800;
+    text-transform: uppercase;
+    margin: 1px;
+}
+.small-button .text {
+    padding: 5px 0 0 5px;
+}
+.form-page {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #392c3c;
+    background-color: #221426;  
+    background-size: 100% 100%;
+    position: relative;
+    min-height: 300px;
+}
+.form-page .content {
+    display: block;
+    width: 800px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 50px;
+    margin: 80px 0 40px 0;
+    position: relative;
+} 
+/*Web Screen*/
+@media (min-width: 769px) {
+}
+/*Mobile screen*/
+@media (max-width: 768px) {
+    .form-control{
+        max-width: 95%;
+    }
+    .small-button { 
+        font-size: 10px;
+        display: block;
+        text-align: center;
+    }
+    .width-100-mobile {
+        width: 100%;
+    }
+    .form-page .content { 
+        width: 100%; 
+        padding: 50px 0 50px 0;
+        margin: 80px 0 40px 0;
+        position: relative;
+    } 
+}

@@ -1,0 +1,23 @@
+{
+    "account": {
+        "title": "Cuenta",
+        "oldpassword": "Clave antigua",
+        "newpassword0": "Clave nueva",
+        "newpassword1": "Repetir clave",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+
+        "success":{
+            "password": "Clave cambiada"
+        },
+
+        "error":{
+            "password": "Ha ocurrido un error"
+        }
+    },
+    "dashboard": {
+        "title": "INFORMACIÓN",
+        "thankyou": "GRACIAS",
+        "registered": "Te has registrado correctamente."
+    }
+}

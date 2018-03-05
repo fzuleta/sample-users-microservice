@@ -1,0 +1,41 @@
+<template>
+<require from="./login.css"></require>
+<div class="login form-page">
+    <div class="content "> 
+        <form>
+            <h1 t="loginreg:login.title">Welcome Back</h1>
+            <h4 t="loginreg:login.subtitle">Good to see you.</h4> 
+
+
+            <div class="form-label"  t="loginreg:login.email">EMAIL</div>
+            <div>
+                <input type="text" value.bind="email" class="form-control input-sm ${errors.email ? 'form-control-error':''}">
+            </div>
+            
+            
+            <div class="form-label" t="loginreg:login.password">PASSWORD</div>
+            <div>
+                <input type="password" value.bind="password" class="form-control input-sm ${errors.password ? 'form-control-error':''}">
+            </div>
+            <br> 
+            <div class="sign-forget">
+                <div class="button sign-in" click.trigger="login()" t="loginreg:login.signin">Sign in</div>
+                <div class="forgot"><a href="#" click.trigger="openForgotPassword()" t="loginreg:login.forgotpass">Forgot password?</a></div>
+            </div>
+
+            <recaptcha verified.call="onCaptchaVerified()" if.bind="captchaEnabled" view-model.ref="captchaDiv"></recaptcha>
+            <br> 
+            <div class="the-button">
+                <div class="button" click.trigger="openSignUp()" t="loginreg:login.signup">Sign Up</div>
+            </div> 
+            <a class="flex" href="" click.trigger="anonymous()">
+                <i class="fa fa-user-secret"></i>
+                <div>&nbsp; </div>
+                <div t="loginreg:login.anonymous" class="text">Anonymous</div>
+            </a>
+            <br> 
+            <div class="small-text">Please only create one account.</div>
+        </form>
+    </div>
+</div>
+</template>

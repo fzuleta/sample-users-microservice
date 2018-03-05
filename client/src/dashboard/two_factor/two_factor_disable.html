@@ -1,0 +1,19 @@
+<template>
+<require from="./two_factor_disable.css"></require>
+<div class="two_factor_disable">
+    <div class="content">
+        <div show.bind="sent">
+            <h1 t="loginreg:twofactordisable.sent">Please check your email</h1>
+        </div>
+        <div show.bind="!sent">
+            <h1 t="loginreg:twofactordisable.title"></h1>
+            <h4 t="loginreg:twofactordisable.subtitle"></h4>
+
+            <div class="form-label" t="loginreg:twofactordisable.password"></div>
+            <div><input type="password" value.bind="password" class="form-control input-sm  ${errors.password ? 'form-control-error':''}"></div>
+            <br> 
+            <div class="the-button"><div class="small-button" click.trigger="disable()" t="loginreg:twofactordisable.disable">Recover password</div></div>
+        </div>
+    </div>
+</div>
+</template>

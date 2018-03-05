@@ -1,0 +1,23 @@
+<template>
+<require from="./header.css"></require>
+<div class="header">
+    <div class="menu"> 
+        <div class="item " t="translation:header.home" click.trigger="goto('')"></div>
+        <div show.bind="!user.isAuthenticatedOrRemembered" class="item " t="translation:header.login" click.trigger="goto('login')"></div>
+        <div show.bind="user.isAuthenticatedOrRemembered" class="item " t="translation:header.dashboard" click.trigger="goto('dashboard')"></div>
+        <div class="item drop">
+            <div class="titleLang" click.trigger="openFlags()">${langSelected} &#x25BC;</div> 
+            <div class="flags" show.bind="showFlags">
+                <div class="flag" click.trigger="changeLangue('en')">
+                    <img src="images/flags/United-States.png" alt="">
+                    <span>English</span>
+                </div>
+                <div class="flag" click.trigger="changeLangue('es')">
+                    <img src="images/flags/Spain.png" alt="">
+                    <span>Spanish</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</template>

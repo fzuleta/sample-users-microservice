@@ -1,0 +1,9 @@
+<template>
+<require from="./button_0.css"></require>
+<div class="button-0 ${btnclass}" ref="div">
+    <div class="icon">
+        <img show.bind="iconsrc!=''" src.bind="iconsrc" width="${iconwidth}" height="${iconheight}" class="btn-element-icon-custom-element"> 
+    </div>
+    <div>${text | sanitize}</div>
+</div>
+</template>

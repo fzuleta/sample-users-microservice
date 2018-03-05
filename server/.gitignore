@@ -1,0 +1,10 @@
+**/.idea/*
+/**/target/*
+/**/log/*
+/**/.tmp/*
+/**/.gradle/*
+/**/build/*
+/**/out/*
+/**/*.spvchain
+/**/*.wallet
+/**/_dump/*

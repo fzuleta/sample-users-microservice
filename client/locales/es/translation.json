@@ -1,0 +1,47 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "industry": "Industry",
+        "solutions": "Solutions",
+        "benefits": "Benefits",
+        "roadmap": "Roadmap",
+        "team": "Team",
+        "login": "Sign in"
+    },
+    "footer": {
+        "title": "Join our pre-sale and get large bonuses today!",
+        "btnapply": "APPLY FOR PRE-SALE",
+        "btnsubscribe": "SUBSCRIBE FOR UPDATES",
+        "placeholdersubscribe": "Subscribe for updates",
+        "copy": "LLC, all rights reserved.",
+        "send": "SEND"
+    },
+    "error": {
+        "route_not_found": "Route not found.",
+        "captcha_error": "Captcha Error",
+        "wrong_user": "Wrong username or password",
+        "server_error": "Please check all data, there was an error",
+        "bad2fa": "Wrong code, please check again your app",
+        "genericError_0": "There was an error processing your request",
+        "genericError_1": "Please revise all data has been properly filled.",
+        "captcha_0": "There was a captcha error, please try again."
+    },
+    "anonymous": {
+        "tip": {
+            "text0": "Estas usando una cuenta de invitado, estas son tus credenciales: ",
+            "text1": "Email: ",
+            "text2": "Contraseña: ",
+            "text3": "Enviarme esta info por correo",
+            "text4": "Email info enviada",
+            "warning": "Cuentas de invitados son inseguras, actualizala a tu correo para volverlas seguras.",
+            "error": "Ya haz creado una cuenta de Invitado. Porfavor usala."
+        },
+        "settings": {
+            "text0": "Estás usando una cuenta anónima, puedes convertirla en tu cuenta principal aqui:",
+            "text1": "Convertír",
+            "text2": "La cuenta ha sido cambiada como tu cuenta principal.",
+            "q0": "Verifique su correo, {{email}}, este cambio es final."
+        }
+    }
+}

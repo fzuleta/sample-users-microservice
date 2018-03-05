@@ -1,0 +1,19 @@
+<template>
+<require from="./app.css"></require>
+<require from="./header/header"></require>
+<require from="./footer/section"></require>
+
+<!-- Loader screen -->
+<div id="loadingScreen" class="loader-animate-panel" >
+    <div class="splash-title">
+        <img src="images/loading_b.gif" />
+    </div>  
+</div>
+
+<!-- Main rendering router -->
+<div style="min-height:100vh;">
+    <header></header>
+    <router-view name="mainView"></router-view>
+    <footer></footer>
+</div>
+</template>

@@ -1,0 +1,17 @@
+.dashboard-balance {
+  max-width: 200px;
+}
+.dashboard-balance .balance {
+  font-size: 48px;
+}
+.dashboard-balance .small {
+  font-size: 12px;
+  color: #ccc;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .dashboard-balance {
+    text-align: center;
+  }
+}

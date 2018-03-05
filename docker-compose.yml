@@ -1,0 +1,147 @@
+version: "3.4"
+
+services:
+  lt_member_read:
+    container_name: lt_member_read
+    image: lt/member_read:latest 
+    build:
+      context: ./.docker/member_read
+      args:
+        - REDIS_PASSWORD=vivaredis123HHbhchgfg9
+        - REDIS_PORT=16444
+      dockerfile: ./redis/redis.dockerfile
+    ports:
+      - "16444:16444"
+    # volumes:
+    #  - /path/to/redis:/data
+    networks:
+      - lt-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1000k"
+        max-file: "3"
+
+  webserver:
+    container_name: webserver
+    image: lt/webserver:latest 
+    build:
+      context: .
+      args:
+        - JAR_LOCATION=./server/webserver/build/libs/webserver-1.0.jar
+        - SSL_LOCATION=./resources/self.keystore
+      dockerfile: .docker/webserver/file.dockerfile
+    environment:
+      - SSLPASS=qweqwe
+      - AURELIALOCATION=/opt/aurelia
+    ports:
+      - "8443:8443"
+    volumes:
+     - ./client:/opt/aurelia
+    networks:
+      - lt-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1000k"
+        max-file: "3"
+
+  apigateway:
+    container_name: apigateway
+    image: lt/apigateway:latest 
+    build:
+      context: .
+      args:
+        - JAR_LOCATION=./server/apigateway/build/libs/apigateway-1.0.jar
+        - SSL_LOCATION=./resources/self.keystore
+        - VERTX_LOCATION=./resources/self.keystore
+      dockerfile: .docker/apigateway/file.dockerfile
+    environment:
+      - SSLPASS=qweqwe
+      - VERTX_SSLPASS=qweqwe
+      - CORS=*
+      - COMPANYNAME=SAMPLE_LOGIN
+      - CLIENT_URL=https://usermicroservice.com:8443
+      - AES_KEY_0=JGVHGVYyfytfytf76t7yutfvhcdfhgvbmnnmlk
+      - AES_KEY_1=DXTDCTEDYTgubfcteciuhj867t75rfhgvy
+      - CAPTCHA_SERVER_KEY=6LfQnEoUAAAAABCl0OP0U3802HevN06JJQx_I5Gf
+      - CAPTCHA_ENABLED=true
+      - DOMAIN=usermicroservice.com
+      - REMEMBERME=Tzhfrprwksieaxxw
+      - HASHSERVICE=mhrgvxxxn777xvdkgy
+      - VERTX_HOST=apigateway
+      - VERTX_ENV=docker
+      - VERTX_CLUSTER_NAME=mysuperawesomecluster
+      - VERTX_CLUSTER_PASSWORD=KGiy7iuhkBHVjhgv
+    ports:
+      - "11190:11190"
+    networks:
+      - lt-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1000k"
+        max-file: "3"
+
+  members:
+    container_name: members
+    image: lt/members:latest 
+    build:
+      context: .
+      args:
+        - JAR_LOCATION=./server/members/build/libs/members-1.0.jar
+        - SSL_LOCATION=./resources/self.keystore
+      dockerfile: .docker/members/file.dockerfile
+    environment:
+      - SSLPASS=qweqwe
+      - VERTX_HOST=members
+      - VERTX_ENV=docker
+      - VERTX_CLUSTER_NAME=mysuperawesomecluster
+      - VERTX_CLUSTER_PASSWORD=KGiy7iuhkBHVjhgv 
+      - JEDIS_URL_USER=lt_member_read
+      - JEDIS_PASS_USER=vivaredis123HHbhchgfg9
+      - JEDIS_PORT_USER=16444
+      - JEDIS_URL_GUEST=lt_member_read
+      - JEDIS_PASS_GUEST=vivaredis123HHbhchgfg9
+      - JEDIS_PORT_GUEST=16444
+      - HASHSERVICE=mhrgvxxxn777xvdkgy
+    networks:
+      - lt-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1000k"
+        max-file: "3"
+
+  contact:
+    container_name: contact
+    image: lt/contact:latest 
+    build:
+      context: .
+      args:
+        - JAR_LOCATION=./server/contact/build/libs/contact-1.0.jar
+        - SSL_LOCATION=./resources/self.keystore
+      dockerfile: .docker/members/file.dockerfile
+    environment:
+      - SSLPASS=qweqwe
+      - VERTX_HOST=contact
+      - VERTX_ENV=docker
+      - VERTX_CLUSTER_NAME=mysuperawesomecluster
+      - VERTX_CLUSTER_PASSWORD=KGiy7iuhkBHVjhgv 
+      - EMAIL_USER=samplelogin16@gmail.com
+      - EMAIL_PASSWORD=qweqwe123123
+      - EMAIL_SERVER=smtp.gmail.com
+      - EMAIL_PORT=465
+      - COMPANYNAME=Sample_login
+      - CLIENT_URL=https://usermicroservice.com
+    networks:
+      - lt-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1000k"
+        max-file: "3"
+
+networks:
+  lt-network:
+    driver: bridge

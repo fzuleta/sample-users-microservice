@@ -1,0 +1,10 @@
+.account .password {
+  max-width: 380px;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .account .password {
+    max-width: 100%;
+  }
+}

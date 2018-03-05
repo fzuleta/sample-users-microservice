@@ -1,0 +1,13 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+/**/.idea/**
+*.iml
+/out/
+/META-INF/
+*Thumbs.db
+/**/.tmp/**
+# ...even if they are in subdirectories
+!*/

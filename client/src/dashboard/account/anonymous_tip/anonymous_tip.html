@@ -1,0 +1,38 @@
+<template>
+<style>
+.anonymous-tip {
+    background-color: #fffec4;
+    padding: 30px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.anonymous-tip .email,
+.anonymous-tip .password
+{
+    font-weight: 800;
+}
+</style>
+<div class="anonymous-tip">
+    <div t="anonymous.tip.text0"></div>
+    <br>
+    <div>
+        <span t="anonymous.tip.text1"></span>
+        <span class="email">${user.me.email}</span>
+    </div>
+    <div>
+        <span t="anonymous.tip.text2"></span>
+        <span class="password">${user.me.anonymousPassword}</span>
+    </div>
+    <br>
+    <div t="anonymous.tip.warning"></div>
+    <br>
+    <a show.bind="!showEmailMe" href="" click.trigger="emailMe()" t="anonymous.tip.text3">Email me this info</a>
+    <div show.bind="showEmailMe && !emailInfosent">
+         <recaptcha verified.call="onCaptchaVerified()" if.bind="captchaEnabled" view-model.ref="captchaDiv"></recaptcha>
+            
+        <input class="form-control input-sm ${errors.email ? 'form-control-error':''}" type="text" value.bind="email" placeholder="Email">
+        <div class="button" click.trigger="login()">Email</div>
+    </div>
+    <div show.bind="emailInfosent" t="anonymous.tip.text4">Email info sent!</div>
+</div>
+</template>

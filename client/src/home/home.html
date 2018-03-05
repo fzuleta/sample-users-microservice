@@ -1,0 +1,42 @@
+<template>
+<require from="./home.css"></require>
+<div class="home  form-page">
+    <div class="content">
+        <div align="center">
+            <h1 t="home:hello0"></h1>
+            <div t="home:hello1"></div>
+            <h4>
+                <div t="home:hello2"></div> 
+                <div t="home:hello3">
+            </h4> 
+            <h2>Features</h2>
+            <div class="list">
+                <ul>
+                    <li>Multiple languages</li>
+                    <li>Registration as email</li>
+                    <li>Registration as guest</li>
+                    <li>Login with email</li>
+                    <li>Login as guest</li>
+                    <li>Two factor authentication</li>
+                    <li>Captcha</li>
+                </ul>
+            </div>
+            <h2>Email</h2>
+            <div class="list">
+                I've setup a basic dummy gmail account, but it may not work at some point
+                <br>
+                open docker-compose.yml find <strong>contact: </strong> (around line 113) 
+                <br> 
+                <a href="https://support.google.com/accounts/answer/6010255?hl=en">if using gmail be sure to set Allow access to less secure apps</a>
+                <br> 
+                <ul>
+                    <li>EMAIL_USER=email@gmail.com</li>
+                    <li>EMAIL_PASSWORD=somesecretpassword</li>
+                    <li>EMAIL_SERVER=smtp.gmail.com</li>
+                    <li>EMAIL_PORT=465</li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+</div>
+</template>

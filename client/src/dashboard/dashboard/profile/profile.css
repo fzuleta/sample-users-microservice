@@ -1,0 +1,16 @@
+.dashboard-profile {
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  min-height: 500px;
+}
+/*Web Screen*/
+/*Mobile screen*/
+@media (max-width: 768px) {
+  .dashboard-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+}

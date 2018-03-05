@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<body bgcolor="#ffffff">
+<div align="center" style="width:600px; font-family:'Arial', sans-serif; color: #4b4b4b;">
+    <div align="left">
+        <br>
+        <strong>Hi ${newMessage.name},</strong>
+        <br><br>
+
+        Click here to confirm your email:
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <a href="${newMessage.link}" style="background-color: #2879ff; border-radius: 10px; padding: 20px; color:white; text-decoration: none; text-transform: uppercase;">
+                CONFIRM EMAIL
+            </a>
+        </div>
+        <br>
+        <br>
+        If you did not request this, simply delete it, you will not be subscribed if you dont confirm.
+        <br>
+        <br>
+        <div style="font-size: 10px;">
+            If you’re having trouble clicking the "CONFIRM EMAIL" button, copy and paste the URL below into your web browser:
+            <br>
+            <a href="${newMessage.link}">${newMessage.link}</a>
+        </div>
+        <br>
+        <br>
+
+        Regards,
+        <br>
+        Felipe
+    </div>
+</div>
+</body>
+</html>

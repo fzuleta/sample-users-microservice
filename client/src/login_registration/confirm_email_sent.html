@@ -1,0 +1,20 @@
+<template>
+<require from="./confirm_email_sent.css"></require>
+<div class="confirm_email_sent form-page">
+    <div class="content">
+        <div align="center">
+            <h3 t="loginreg:confirm_email_sent.sent">Please check your email</h3>
+        </div>
+
+        <div align="center" show.bind="!emailSent">
+            <span t="loginreg:confirm_email_sent.n0">If the email takes longer than 5 minutes</span>
+            <a href="" click.trigger="sendAgain()" t="loginreg:confirm_email_sent.n1">click here</a>
+            <span t="loginreg:confirm_email_sent.n2">to send again</span>
+        </div>
+
+        <div align="center" show.bind="emailSent" t="loginreg:confirm_email_sent.n3">
+            We've tried sending it again, please check your email, check your spam folder as well please.
+        </div>
+    </div>
+</div>
+</template>
