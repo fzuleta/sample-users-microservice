@@ -37,6 +37,11 @@ This is a fully running `client/server` implementation for a user management too
 
 - You can always run with intelliJ by either running each module, or as a configuration.
 
+
+## Future Recomendations:
+- Implement apache kafka as an event store.
+- Implement each future microservice with it's own read-store.
+
 ### when adding new microservices
 update self.keystore in `resources` and add a new `dns:XXXXXXXX` and build and run again the docker images.
 
