@@ -3,6 +3,7 @@
 ## What is this?
 
 ![Gif](resources/readme/gif.gif "Gif")
+
 This is a fully running `client/server` implementation for a user management tool (requires a user to login to load a dashboard), with dev goals for:
 1. Scalable
 2. Easy to deploy
@@ -19,6 +20,7 @@ This is a fully running `client/server` implementation for a user management too
 - Login (with remember me)
 - Captchas
 - Google Analytics
+- Multi-Language (EN/ES), scalable to n amount of languages.
 - Registration
 - Confirm email
 - Forgot password
