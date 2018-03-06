@@ -1,13 +1,15 @@
 # Sample-User-Microservices
 
 ## What is this?
+
+![Gif](resources/readme/gif.gif "Gif")
 This is a fully running `client/server` implementation for a user management tool (requires a user to login to load a dashboard), with dev goals for:
 1. Scalable
 2. Easy to deploy
 3. Same environment for Dev|Prod
 4. Concise
 
-![alt text](resources/readme/flow.jpg "Flow")
+![Flow](resources/readme/flow.jpg "Flow")
 
 ## Technology:
 - **Sever**: Kotlin, Java, Jetty, Redis, Apache Shiro, AES encryption, Vert.X messaging (with ssl).
