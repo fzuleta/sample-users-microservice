@@ -1,5 +1,5 @@
 {
-  "name": "Tokensale",
+  "name": "samplelogin",
   "type": "project:application",
   "bundler": {
     "id": "cli",
@@ -31,7 +31,14 @@
         "name": "vendor-bundle.js",
         "prepend": [
           "node_modules/bluebird/js/browser/bluebird.core.js",
-          "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
+          {
+            "path": "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird-no-long-stacktraces.js",
+            "env": "stage & prod"
+          },
+          {
+            "path": "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
+            "env": "dev"
+          },
           "node_modules/requirejs/require.js",
           "node_modules/jquery/dist/jquery.js"
         ],
@@ -57,7 +64,6 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
-          "aurelia-fetch-client",
           {
             "name": "aurelia-templating-resources",
             "path": "../node_modules/aurelia-templating-resources/dist/amd",
@@ -75,52 +81,54 @@
             "env": "dev"
           },
           "text",
+          "jquery",
           {
-              "name": "aurelia-dialog",
-              "path": "../node_modules/aurelia-dialog/dist/amd",
-              "main": "aurelia-dialog"
+            "name": "aurelia-fetch-client",
+            "main": "aurelia-fetch-client",
+            "path": "../node_modules/aurelia-fetch-client/dist/amd",
+            "resources": []
           },
-
+          {
+            "name": "aurelia-dialog",
+            "main": "aurelia-dialog",
+            "path": "../node_modules/aurelia-dialog/dist/amd",
+            "resources": []
+          },
+          {
+            "name": "aurelia-i18n",
+            "main": "aurelia-i18n",
+            "path": "../node_modules/aurelia-i18n/dist/amd",
+            "resources": []
+          },
           {
             "name": "intl",
             "path": "../node_modules/intl/dist",
             "main": "Intl.min"
           },
-          {
-            "name": "i18next",
-            "path": "../node_modules/i18next/dist/umd",
-            "main": "i18next"
-          },
-          {
-            "name": "aurelia-i18n",
-            "path": "../node_modules/aurelia-i18n/dist/amd",
-            "main": "aurelia-i18n"
-          },
-          "jquery",
-          {
-            "name": "i18next-xhr-backend",
-            "path": "../node_modules/i18next-xhr-backend/dist/umd",
-            "main": "i18nextXHRBackend"
-          },
-          {
-            "name": "numeral",
-            "path": "../node_modules/numeral/min",
-            "main": "numeral.min" 
-          },
+          "numeral",
           {
             "name": "moment",
-            "path": "../node_modules/moment/min",
-            "main": "moment.min" 
+            "main": "./moment.js",
+            "path": "../node_modules/moment",
+            "resources": []
           },
-          {
-            "name": "xss-filters",
-            "path": "../node_modules/xss-filters/dist",
-            "main": "xss-filters.min"
-          },
+          "xss-filters",
           {
             "name": "countup.js",
             "path": "../node_modules/countup.js/dist",
-            "main": "countUp.min"
+            "main": "./countUp.min"
+          },
+          {
+            "name": "i18next",
+            "main": "./i18next.js",
+            "path": "../node_modules/i18next/dist/umd/",
+            "resources": []
+          },
+          {
+            "name": "i18next-xhr-backend",
+            "main": "./i18nextXHRBackend.js",
+            "path": "../node_modules/i18next-xhr-backend/dist/umd",
+            "resources": []
           }
         ]
       }

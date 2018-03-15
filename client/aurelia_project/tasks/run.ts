@@ -12,7 +12,7 @@ let serve = gulp.series(
     browserSync({
       online: false,
       open: false,
-      port: 7371,
+      port: 9850,
       logLevel: 'silent',
       server: {
         baseDir: [project.platform.baseDir],

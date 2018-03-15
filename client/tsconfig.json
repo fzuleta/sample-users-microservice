@@ -11,15 +11,7 @@
     "experimentalDecorators": true,
     "allowJs": true,
     "moduleResolution": "node",
-    "lib": ["es2017", "dom"],
-    "baseUrl": ".", 
-    "paths": {
-      "jquery": ["node_modules/jquery/dist/jquery"],
-      "moment": ["node_modules/moment/min/moment.min"],
-      "moment-timezone": ["node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"],
-      "countup.js": ["node_modules/countup.js/dist/countUp.min.js"],
-      "select2": ["node_modules/select2/dist/js/select2.min.js"]
-    }
+    "lib": ["es2017", "dom"]
   },
   "exclude": [
     "node_modules",
